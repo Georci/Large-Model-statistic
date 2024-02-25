@@ -1,0 +1,43 @@
+Arguments: 
+  /home/kenijima/.nvm/versions/node/v16.16.0/bin/node /usr/share/yarn/bin/yarn.js add @typechain/ether-v6
+
+PATH: 
+  /home/kenijima/.vscode-server/bin/903b1e9d8990623e3d7da1df3d33db3e42d80eda/bin/remote-cli:/home/kenijima/.cargo/bin:/home/kenijima/.nvm/versions/node/v16.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Python312/Scripts/:/mnt/c/Python312/:/mnt/d/新建文件夹/bin/:/mnt/c/W:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/d/Graphviz/bin:/mnt/d/Graphviz/bin:/mnt/d/nodejs/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/dotnet/:/mnt/d/KEN/Program Files/Git/cmd:/mnt/d/KEN/Program Files/GO/bin:/mnt/d/GCC/mingw64/bin:/mnt/c/Windows/system32/:/mnt/c/Windows/:/mnt/c/Windows/System32/Wbem/:/mnt/d/TortoiseSVN/bin:/mnt/d/MySQL/MySQL/bin:/mnt/d/Xshell/:/mnt/d/MySQL/MySQL/bin/:/mnt/c/Users/KEN/.cargo/bin:/mnt/d/Anaconda3:/mnt/d/Anaconda3/Library/mingw-w64/bin:/mnt/d/Anaconda3/Library/usr/bin:/mnt/d/Anaconda3/Library/bin:/mnt/d/Anaconda3/Scripts:/mnt/c/Users/KEN/AppData/Local/Microsoft/WindowsApps:/mnt/d/Microsoft VS Code/Microsoft VS Code/bin:/mnt/c/Users/KEN/AppData/Roaming/npm:/mnt/c/Users/KEN/.dotnet/tools:/mnt/c/Users/KEN/go/bin:/mnt/d/GOlang/GoLand 2023.2.4/bin:/mnt/d/GCC/mingw64/bin:/mnt/d/Java/jdk1.8.0_202/bin:/mnt/d/IntelliJ IDEA 2023.1/bin:/mnt/d/DataGrip 2023.1/bin:/mnt/d/WebStorm 2023.1.4/bin:/mnt/d/MySQL/MySQL/bin:/snap/bin:/home/kenijima/.foundry/bin:/home/kenijima/.foundry/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.npmjs.org/@typechain%2fether-v6: Not found
+      at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66145:18)
+      at Request.self.callback (/usr/share/yarn/lib/cli.js:140890:22)
+      at Request.emit (node:events:527:28)
+      at Request.<anonymous> (/usr/share/yarn/lib/cli.js:141862:10)
+      at Request.emit (node:events:527:28)
+      at IncomingMessage.<anonymous> (/usr/share/yarn/lib/cli.js:141784:12)
+      at Object.onceWrapper (node:events:641:28)
+      at IncomingMessage.emit (node:events:539:35)
+      at endReadableNT (node:internal/streams/readable:1345:12)
+      at processTicksAndRejections (node:internal/process/task_queues:83:21)
+
+npm manifest: 
+  {
+    "dependencies": {
+      "@moralisweb3/common-evm-utils": "^2.24.3",
+      "express": "^4.18.2",
+      "moralis": "^2.24.3",
+      "node-fetch": "^2.7.0"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
