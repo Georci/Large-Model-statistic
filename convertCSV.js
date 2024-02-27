@@ -4,10 +4,16 @@ const fetchData = require('./getFuncName.js');
 
 const fs = require('fs');
 
-async function processStructLogs(inputFilePath, pc) {
+async function processStructLogs(attackName, inputFilePath, pc) {
     // 读取 JSON 文件
     // const inputFilePath = './output.json'; //输入文件
-    const outputFilePath = `/home/kenijima/usr/work/LM/output_${pc}.csv`; // 输出文件
+    let outputFilePath = '';
+    if (attackName.slice(-6) == "attack") {
+        outputFilePath = `/home/kenijima/usr/work/LM/DEX/output/attack/${attackName}_${pc}.csv`; // 输出文件
+    } else {
+        outputFilePath = `/home/kenijima/usr/work/LM/DEX/output/total/${attackName}_${pc}.csv`;
+    }
+
 
     // inputFilePath = './output_1.json'
     console.log("当前的输入文件：", inputFilePath)
