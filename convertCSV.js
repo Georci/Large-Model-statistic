@@ -9,9 +9,9 @@ async function processStructLogs(attackName, inputFilePath, pc) {
     // const inputFilePath = './output.json'; //输入文件
     let outputFilePath = '';
     if (attackName.slice(-6) == "attack") {
-        outputFilePath = `/home/kenijima/usr/work/LM/DEX/output/attack/${attackName}_${pc}.csv`; // 输出文件
+        outputFilePath = `/root/WXZ/Large-Model-statistic/DEX/output/attack/${attackName}_${pc}.csv`; // 输出文件
     } else {
-        outputFilePath = `/home/kenijima/usr/work/LM/DEX/output/total/${attackName}_${pc}.csv`;
+        outputFilePath = `/root/WXZ/Large-Model-statistic/DEX/output/total/${attackName}_${pc}.csv`;
     }
 
 

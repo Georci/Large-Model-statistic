@@ -47,9 +47,9 @@ const alchemyTrace_calltracer = async function (projectName, attack_tx, pc) {
 
     let filePath;
     if (projectName.slice(-6) == "attack") {
-      filePath = `/home/kenijima/usr/work/LM/DEX/attack/${projectName}_${pc}_call_tracer.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/DEX/attack/${projectName}_${pc}_call_tracer.json`;
     } else {
-      filePath = `/home/kenijima/usr/work/LM/DEX/total/${projectName}_${pc}_call_tracer.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/total/${projectName}_${pc}_call_tracer.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

@@ -67,7 +67,7 @@ const getMultipleInformation = async function (attackName, inputFile, tx_opFile,
             }
         }
         // 输出到JSON文件
-        const outputFile = `/home/kenijima/usr/work/LM/MergeOutput/${attackName}_${n}.json`; // 请替换为实际的输出文件路径
+        const outputFile = `/root/WXZ/Large-Model-statistic/MergeOutput/${attackName}_${n}.json`; // 请替换为实际的输出文件路径
         fs.writeFileSync(outputFile, JSON.stringify(parsedtx_Data, null, 2), 'utf8');
         console.log(`结果已写入到 ${outputFile}`);
 

@@ -20,7 +20,7 @@ async function main(attackName, contractAddress) {
 
     try {
         if (contractAddress.length == 42) {
-            const contractTransaction = await fetchContractTransactions(contractAddress);
+            const contractTransaction = await fetchContractTransactions(attackName, contractAddress);
             console.log(contractTransaction)
             const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
             console.log(Transactions)
