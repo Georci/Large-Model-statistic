@@ -27,7 +27,7 @@ pc = 1
 function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
-const alchemyTrace_calltracer = async function (projectName, attack_tx, pc) {
+const alchemyTrace_calltracer = async function (ProjectClass, ProjectName, attack_tx, pc) {
   try {
     const res = await axios.post(quick_node_rpc, {
       "jsonrpc": "2.0",
@@ -46,10 +46,12 @@ const alchemyTrace_calltracer = async function (projectName, attack_tx, pc) {
     let dataToWrite = res.data.result;
 
     let filePath;
-    if (projectName.slice(-6) == "attack") {
-      filePath = `/root/WXZ/Large-Model-statistic/DEX/attack/${projectName}_${pc}_call_tracer.json`;
+    if (ProjectName.slice(-6) == "attack") {
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
     } else {
-      filePath = `/root/WXZ/Large-Model-statistic/total/${projectName}_${pc}_call_tracer.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

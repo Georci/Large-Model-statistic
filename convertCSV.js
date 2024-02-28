@@ -4,14 +4,16 @@ const fetchData = require('./getFuncName.js');
 
 const fs = require('fs');
 
-async function processStructLogs(attackName, inputFilePath, pc) {
+async function processStructLogs(ProjectClass, ProjectName, inputFilePath, pc) {
     // 读取 JSON 文件
     // const inputFilePath = './output.json'; //输入文件
     let outputFilePath = '';
-    if (attackName.slice(-6) == "attack") {
-        outputFilePath = `/root/WXZ/Large-Model-statistic/DEX/output/attack/${attackName}_${pc}.csv`; // 输出文件
+    if (ProjectName.slice(-6) == "attack") {
+        // outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`; // 输出文件
+        outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`;
     } else {
-        outputFilePath = `/root/WXZ/Large-Model-statistic/DEX/output/total/${attackName}_${pc}.csv`;
+        // outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
+        outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
     }
 
 

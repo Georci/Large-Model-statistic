@@ -31,7 +31,7 @@ quick_node_rpc = "https://lb.nodies.app/v1/181a5ebf4c954f8496ae7cbc1ac8d03b"
 function sleep(time) {
   return new Promise((resolve) => setTimeout(resolve, time));
 }
-const alchemyTrace_optracer = async function (projectName, attack_tx, pc) {
+const alchemyTrace_optracer = async function (ProjectClass, ProjectName, attack_tx, pc) {
   try {
     const res = await axios.post(quick_node_rpc, {
       "jsonrpc": "2.0",
@@ -53,10 +53,12 @@ const alchemyTrace_optracer = async function (projectName, attack_tx, pc) {
     console.log(dataToWrite)
 
     let filePath;
-    if (projectName.slice(-6) == "attack") {
-      filePath = `/root/WXZ/Large-Model-statistic/DEX/attack/${projectName}_${pc}_tracer_logs.json`;
+    if (ProjectName.slice(-6) == "attack") {
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
     } else {
-      filePath = `/root/WXZ/Large-Model-statistic/DEX/total/${projectName}_${pc}_tracer_logs.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

@@ -1,0 +1,155 @@
+{
+    "DEX": [
+        {
+            "name": "SushiSwap",
+            "address": "0xF9a001d5B2c7c5e45693B41FCF931B94e680cAC4",
+            "attackhash": "0x04b166e7b4ab5105a8e9c85f08f6346de1c66368687215b0e0b58d6e5002bc32"
+        },
+        {
+            "name": "RevertFinance",
+            "address": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+            "attackhash": "0xdaccbc437cb07427394704fbcc8366589ffccf974ec6524f3483844b043f31d5"
+        },
+        {
+            "name": "Dexible Rubic",
+            "address": "0x4C19596f5aAfF459fA38B0f7eD92F11AE6543784",
+            "attackhash": "0x138daa4cbeaa3db42eefcec26e234fc2c89a4aa17d6b1870fc460b2856fd11a6"
+        },
+        {
+            "name": "Rubic",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0x9a97d85642f956ad7a6b852cf7bed6f9669e2c2815f3279855acf7f1328e7d46"
+        },
+        {
+            "name": "DODO",
+            "address": "0xf2dF8794f8F99f1Ba4D8aDc468EbfF2e47Cd7010",
+            "attackhash": "0x395675b56370a9f5fe8b32badfa80043f5291443bd6c8273900476880fb5221e"
+        },
+        {
+            "name": "NOWSwap",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0xf3158a7ea59586c5570f5532c22e2582ee9adba2408eabe61622595197c50713"
+        },
+        {
+            "name": "SushiSwap",
+            "address": "0x4c4564a1FE775D97297F9e3Dc2e762e0Ed5Dda0e",
+            "attackhash": "0x78d6355703507f88f2090eb780d245b0ab26bf470eabdb004761cedf3b1cda44"
+        },
+        {
+            "name": "MonoX Finance",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0x9f14d093a2349de08f02fc0fb018dadb449351d0cdb7d0738ff69cc6fef5f299"
+        },
+        {
+            "name": "Visor Finance",
+            "address": "0xC9f27A50f82571C1C8423A42970613b8dBDA14ef",
+            "attackhash": "0x69272d8c84d67d1da2f6425b339192fa472898dce936f24818fda415c1c1ff3f"
+        },
+        {
+            "name": "Bancor Protocol",
+            "address": "0x5f58058c0ec971492166763c8c22632b583f667f",
+            "attackhash": "0x4643b63dcbfc385b8ab8c86cbc46da18c2e43d277de3e5bc3b4516d3c0fdeb9f"
+        }
+    ],
+    "Lending": [
+        {
+            "name": "RoeFinance",
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "attackhash": "0x927b784148b60d5233e57287671cdf67d38e3e69e5b6d0ecacc7c1aeaa98985b"
+        },
+        {
+            "name": "InverseFinance",
+            "address": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599",
+            "attackhash": "0x958236266991bc3fe3b77feaacea120f172c0708ad01c7a715b255f218f9313c"
+        },
+        {
+            "name": "Rari Capital",
+            "address": "0xE16DB319d9dA7Ce40b666DD2E365a4b8B3C18217",
+            "attackhash": "0xab486012f21be741c9e674ffda227e30518e8a1e37a5f1d58d0b0d41f6e76530"
+        },
+        {
+            "name": "Bacon Protocol",
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "attackhash": "0x7d2296bcb936aa5e2397ddf8ccba59f54a178c3901666b49291d880369dbcf31"
+        },
+        {
+            "name": "Qubit Finance",
+            "address": "0x722122dF12D4e14e13Ac3b6895a86e84145b6967",
+            "attackhash": "0xac7292e7d0ec8ebe1c94203d190874b2aab30592327b6cc875d00f18de6f3133"
+        },
+        {
+            "name": "Cream Finance",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0xa9a1b8ea288eb9ad315088f17f7c7386b9989c95b4d13c81b69d5ddad7ffe61e"
+        }
+    ],
+    "Bridge": [
+        {
+            "name": "Nomad Bridge",
+            "address": "0x88A69B4E698A4B090DF6CF5Bd7B2D47325Ad30A3",
+            "attackhash": "0xed26708a7335116bdb0673f32ace7c2f329fe3cd349e200447210f1721f335f0"
+        },
+        {
+            "name": "Harmony's Horizon",
+            "address": "0xF9Fb1c508Ff49F78b60d3A96dea99Fa5d7F3A8A6",
+            "attackhash": "0x27981c7289c372e601c9475e5b5466310be18ed10b59d1ac840145f6e7804c97"
+        },
+        {
+            "name": "Wintermute",
+            "address": "0x76e2cfc1f5fa8f6a5b3fc4c8f4788f0116861f9b",
+            "attackhash": "0x75a42f240d229518979199f56cd7c82e4fc1f1a20ad9a4864c635354b4a34261"
+        },
+        {
+            "name": "Li.Fi",
+            "address": "0x5A9Fd7c39a6C488E715437D7b1f3C823d5596eD1",
+            "attackhash": "0x4b4143cbe7f5475029cf23d6dcbb56856366d91794426f2e33819b9b1aac4e96"
+        },
+        {
+            "name": "Qubit Finance",
+            "address": "0x20E5E35ba29dC3B540a1aee781D0814D5c77Bce6",
+            "attackhash": "0xac7292e7d0ec8ebe1c94203d190874b2aab30592327b6cc875d00f18de6f3133"
+        },
+        {
+            "name": "Multichain (Anyswap)",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0xe50ed602bd916fc304d53c4fed236698b71691a95774ff0aeeb74b699c6227f7"
+        },
+        {
+            "name": "Poly Network",
+            "address": "0x5121E348e897dAEf1Eef23959Ab290e5557CF274",
+            "attackhash": "0xb1f70464bd95b774c6ce60fc706eb5f9e35cb5f06e6cfe7c17dcda46ffd59581"
+        }
+    ],
+    "Yield": [
+        {
+            "name": "EFLeverVault",
+            "address": "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+            "attackhash": "0x160c5950a01b88953648ba90ec0a29b0c5383e055d35a7835d905c53a3dda01e"
+        },
+        {
+            "name": "Templedao",
+            "address": "0xBcB8b7FC9197fEDa75C101fA69d3211b5a30dCD9",
+            "attackhash": "0x8c3f442fc6d640a6ff3ea0b12be64f1d4609ea94edd2966f42c01cd9bdcf04b5"
+        },
+        {
+            "name": "Auctus",
+            "address": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+            "attackhash": "0x2e7d7e7a6eb157b98974c8687fbd848d0158d37edc1302ea08ee5ddb376befea"
+        },
+        {
+            "name": "Nimbus Platform",
+            "address": "0x9536A78440f72f5E9612949F1848fe5E9D4934CC",
+            "attackhash": "0xf3158a7ea59586c5570f5532c22e2582ee9adba2408eabe61622595197c50713"
+        },
+        {
+            "name": "Pickle Finance",
+            "address": "0x6847259b2B3A4c17e7c43C54409810aF48bA5210",
+            "attackhash": "0xe72d4e7ba9b5af0cf2a8cfb1e30fd9f388df0ab3da79790be842bfbed11087b0"
+        },
+        {
+            "name": "Harvest Finance",
+            "address": "0xc6028a9Fa486F52efd2B95B949AC630d287CE0aF",
+            "attackhash": "0x35f8d2f572fceaac9288e5d462117850ef2694786992a8c3f6d02612277b0877"
+        }
+    ]
+}

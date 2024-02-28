@@ -11,7 +11,7 @@ const fs = require('fs');
 // const parsedData = JSON.parse(inputData);
 // const parsedtx_Data = JSON.parse(tx_Data);
 
-const getMultipleInformation = async function (attackName, inputFile, tx_opFile, n) {
+const getMultipleInformation = async function (ProjectClass, ProjectName, inputFile, tx_opFile, n) {
 
     const inputData = await fs.promises.readFile(inputFile, 'utf8');
     const tx_Data = await fs.promises.readFile(tx_opFile, 'utf8');
@@ -67,7 +67,8 @@ const getMultipleInformation = async function (attackName, inputFile, tx_opFile,
             }
         }
         // 输出到JSON文件
-        const outputFile = `/root/WXZ/Large-Model-statistic/MergeOutput/${attackName}_${n}.json`; // 请替换为实际的输出文件路径
+        // const outputFile = `/root/WXZ/Large-Model-statistic/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`; // 请替换为实际的输出文件路径
+        const outputFile = `/home/kenijima/usr/work/LM/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`;
         fs.writeFileSync(outputFile, JSON.stringify(parsedtx_Data, null, 2), 'utf8');
         console.log(`结果已写入到 ${outputFile}`);
 
