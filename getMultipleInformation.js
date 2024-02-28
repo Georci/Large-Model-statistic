@@ -67,8 +67,8 @@ const getMultipleInformation = async function (ProjectClass, ProjectName, inputF
             }
         }
         // 输出到JSON文件
-        // const outputFile = `/root/WXZ/Large-Model-statistic/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`; // 请替换为实际的输出文件路径
-        const outputFile = `/home/kenijima/usr/work/LM/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`;
+        const outputFile = `/root/WXZ/Large-Model-statistic/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`; // 请替换为实际的输出文件路径
+        // const outputFile = `/home/kenijima/usr/work/LM/MergeOutput/${ProjectClass}_${ProjectName}_${n}.json`;
         fs.writeFileSync(outputFile, JSON.stringify(parsedtx_Data, null, 2), 'utf8');
         console.log(`结果已写入到 ${outputFile}`);
 

@@ -47,11 +47,11 @@ const alchemyTrace_calltracer = async function (ProjectClass, ProjectName, attac
 
     let filePath;
     if (ProjectName.slice(-6) == "attack") {
-      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
-      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
+      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
     } else {
-      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
-      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
+      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

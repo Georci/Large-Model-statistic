@@ -9,11 +9,11 @@ async function processStructLogs(ProjectClass, ProjectName, inputFilePath, pc) {
     // const inputFilePath = './output.json'; //输入文件
     let outputFilePath = '';
     if (ProjectName.slice(-6) == "attack") {
-        // outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`; // 输出文件
-        outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`;
+        outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`; // 输出文件
+        // outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/attack/${ProjectName}_${pc}.csv`;
     } else {
-        // outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
-        outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
+        outputFilePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
+        // outputFilePath = `/home/kenijima/usr/work/LM/${ProjectClass}/output/total/${ProjectName}_${pc}.csv`;
     }
 
 

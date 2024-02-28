@@ -54,11 +54,11 @@ const alchemyTrace_optracer = async function (ProjectClass, ProjectName, attack_
 
     let filePath;
     if (ProjectName.slice(-6) == "attack") {
-      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
-      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
+      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
     } else {
-      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
-      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
+      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

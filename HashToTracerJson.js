@@ -8,7 +8,7 @@ const axios = require('axios');
 
 const projectData = require('./Project.json')
 
-const fetchContractTransactions = require('./GetContractTransactions')
+const { start, fetchContractTransactions } = require('./GetContractTransactions')
 const alchemyTrace_optracer = require('./tracer/tracer_log')
 const alchemyTrace_calltracer = require('./tracer/call_tracer')
 const getMultipleInformation = require('./getMultipleInformation')
@@ -18,7 +18,7 @@ const processStructLogs = require('./convertCSV')
 // console.log(parseTransactions)
 
 let n = 1;
-let attackName;
+let ProjectClass;
 let contractAddress;
 let ProjectName;
 
@@ -27,21 +27,42 @@ async function GetPreData() {
 
     // main(ProjectName, attackName, contractAddress);
     try {
+        await start();
         while (projectData.DEX[i]) {
             try {
                 let struct = projectData.DEX[i];
-                await main("DEX", struct.name, struct.address);
-                await main("DEX", struct.name + "_attack", struct.attackhash);
+                ProjectClass = "DEX";
+                ProjectName = struct.name;
+                contractAddress = struct.address;
+                const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+                console.log(contractTransaction)
+                const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+                console.log(Transactions)
+                const parseTransactions = JSON.parse(Transactions);
+
+                await main(ProjectClass, ProjectName, contractAddress, parseTransactions);
+                await main(ProjectClass, ProjectName + "_attack", struct.attackhash, parseTransactions);
+                i = i + 1;
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
             }
         };
+        i = 0;
         while (projectData.Lending[i]) {
             try {
                 let struct = projectData.Lending[i];
-                await main("LENDING", struct.name, struct.address);
-                await main("LENDING", struct.name + "_attack", struct.attackhash);
+                ProjectClass = "LENDING";
+                ProjectName = struct.name;
+                contractAddress = struct.address;
+                const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+                console.log(contractTransaction)
+                const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+                console.log(Transactions)
+                const parseTransactions = JSON.parse(Transactions);
+
+                await main(ProjectClass, ProjectName, contractAddress, parseTransactions);
+                await main(ProjectClass, ProjectName + "_attack", struct.attackhash, parseTransactions);
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
@@ -50,8 +71,17 @@ async function GetPreData() {
         while (projectData.Bridge[i]) {
             try {
                 let struct = projectData.Bridge[i];
-                await main("BRIDGE", struct.name, struct.address);
-                await main("BRIDGE", struct.name + "_attack", struct.attackhash);
+                ProjectClass = "BRIDGE";
+                ProjectName = struct.name;
+                contractAddress = struct.address;
+                const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+                console.log(contractTransaction)
+                const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+                console.log(Transactions)
+                const parseTransactions = JSON.parse(Transactions);
+
+                await main(ProjectClass, ProjectName, contractAddress, parseTransactions);
+                await main(ProjectClass, ProjectName + "_attack", struct.attackhash, parseTransactions);
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
@@ -60,8 +90,17 @@ async function GetPreData() {
         while (projectData.Yield[i]) {
             try {
                 let struct = projectData.Yield[i];
-                await main("YIELD", struct.name, struct.address);
-                await main("YIELD", struct.name + "_attack", struct.attackhash);
+                ProjectClass = "YIELD";
+                ProjectName = struct.name;
+                contractAddress = struct.address;
+                const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+                console.log(contractTransaction)
+                const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+                console.log(Transactions)
+                const parseTransactions = JSON.parse(Transactions);
+
+                await main(ProjectClass, ProjectName, contractAddress, parseTransactions);
+                await main(ProjectClass, ProjectName + "_attack", struct.attackhash, parseTransactions);
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
@@ -75,15 +114,15 @@ async function GetPreData() {
 
 GetPreData()
 
-async function main(ProjectClass, ProjectName, contractAddress) {
+async function main(ProjectClass, ProjectName, contractAddress, parseTransactions) {
 
     try {
         if (contractAddress.length == 42) {
-            const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
-            console.log(contractTransaction)
-            const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
-            console.log(Transactions)
-            const parseTransactions = JSON.parse(Transactions);
+            // const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+            // console.log(contractTransaction)
+            // const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+            // console.log(Transactions)
+            // const parseTransactions = JSON.parse(Transactions);
             // console.log(parseTransactions)
 
             let optracerPath = '';
