@@ -10,7 +10,7 @@ const agent = new https.Agent({
 });
 
 const config = {
-  timeout: 10000, // 设置超时时间为 5 秒
+  timeout: 20000, // 设置超时时间为 5 秒
   httpsAgent: agent // 使用自定义的 httpsAgent
 };
 
@@ -18,6 +18,7 @@ const config = {
 
 let jsonData
 quick_node_rpc = "https://lb.nodies.app/v1/181a5ebf4c954f8496ae7cbc1ac8d03b"
+quick_node_rpc = "https://tame-chaotic-daylight.quiknode.pro/32e033fc75eafaba0a8e4c0044f81e548021e6e8/"
 
 projectName = ""
 attack_tx = ""
@@ -47,11 +48,11 @@ const alchemyTrace_calltracer = async function (ProjectClass, ProjectName, attac
 
     let filePath;
     if (ProjectName.slice(-6) == "attack") {
-      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
-      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_call_tracer.json`;
     } else {
-      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
-      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_call_tracer.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

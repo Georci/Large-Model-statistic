@@ -9,7 +9,7 @@ const agent = new https.Agent({
 });
 
 const config = {
-  timeout: 10000, // 设置超时时间为 5 秒
+  timeout: 20000, // 设置超时时间为 5 秒
   httpsAgent: agent // 使用自定义的 httpsAgent
 };
 
@@ -54,11 +54,11 @@ const alchemyTrace_optracer = async function (ProjectClass, ProjectName, attack_
 
     let filePath;
     if (ProjectName.slice(-6) == "attack") {
-      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
-      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/attack/${ProjectName}_${pc}_tracer_logs.json`;
     } else {
-      filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
-      // filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
+      // filePath = `/root/WXZ/Large-Model-statistic/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
+      filePath = `/home/kenijima/usr/work/LM/${ProjectClass}/total/${ProjectName}_${pc}_tracer_logs.json`;
     }
 
     let jsonData = JSON.stringify(dataToWrite, null, 2);

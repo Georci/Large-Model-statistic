@@ -44,7 +44,9 @@ async function processStructLogs(ProjectClass, ProjectName, inputFilePath, pc) {
         laststate: "",
         funcArgCount: ""
     };
-    let newFlag;
+    let newFlag = {
+        to: ""
+    };
 
     let n = 0;// SSTORE、SLOAD的执行计数器
     let callArray = []; // 用于记录所有的call类以及CREATE操作
@@ -55,6 +57,7 @@ async function processStructLogs(ProjectClass, ProjectName, inputFilePath, pc) {
         for (let i = 0; i < structLogs.length; i++) {
             let log = structLogs[i];
             if (log.op == "CALL" || log.op == "STATICCALL" || log.op == "DELEGATECALL" || log.op == "CREATE" || log.op == "RETURN" || log.op == "SLOAD" || log.op == "SSTORE" || log.op == "LOG0" || log.op == "LOG1" || log.op == "LOG2" || log.op == "LOG3" || log.op == "LOG4") {
+                // newFlag.to = "";
                 if (log.op == "CALL" || log.op == "STATICCALL" || log.op == "DELEGATECALL" || log.op == "CREATE" || log.op == "SLOAD" || log.op == "SSTORE" || log.op == "LOG0" || log.op == "LOG1" || log.op == "LOG2" || log.op == "LOG3" || log.op == "LOG4") {
                     if (log.op == "CALL" || log.op == "STATICCALL" || log.op == "DELEGATECALL" || log.op == "CREATE") {
                         // 在本次写数据之前，先处理上一层未完成的数据

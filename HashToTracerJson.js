@@ -8,7 +8,7 @@ const axios = require('axios');
 
 const projectData = require('./Project.json')
 
-const { start, fetchContractTransactions } = require('./GetContractTransactions')
+const fetchContractTransactions = require('./TESTAPIGetContractTransactions')
 const alchemyTrace_optracer = require('./tracer/tracer_log')
 const alchemyTrace_calltracer = require('./tracer/call_tracer')
 const getMultipleInformation = require('./getMultipleInformation')
@@ -22,15 +22,18 @@ let ProjectClass;
 let contractAddress;
 let ProjectName;
 
+GetPreData()
+
 async function GetPreData() {
     let i = 0;
 
     // main(ProjectName, attackName, contractAddress);
     try {
-        await start();
+        // await start();
         while (projectData.DEX[i]) {
+            let struct;
             try {
-                let struct = projectData.DEX[i];
+                struct = projectData.DEX[i];
                 ProjectClass = "DEX";
                 ProjectName = struct.name;
                 contractAddress = struct.address;
@@ -46,12 +49,14 @@ async function GetPreData() {
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
+                i = i + 1;
             }
         };
         i = 0;
         while (projectData.Lending[i]) {
+            let struct;
             try {
-                let struct = projectData.Lending[i];
+                struct = projectData.Lending[i];
                 ProjectClass = "LENDING";
                 ProjectName = struct.name;
                 contractAddress = struct.address;
@@ -66,11 +71,13 @@ async function GetPreData() {
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
+                i = i + 1;
             }
         };
         while (projectData.Bridge[i]) {
+            let struct;
             try {
-                let struct = projectData.Bridge[i];
+                struct = projectData.Bridge[i];
                 ProjectClass = "BRIDGE";
                 ProjectName = struct.name;
                 contractAddress = struct.address;
@@ -85,11 +92,13 @@ async function GetPreData() {
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
+                i = i + 1;
             }
         };
         while (projectData.Yield[i]) {
+            let struct;
             try {
-                let struct = projectData.Yield[i];
+                struct = projectData.Yield[i];
                 ProjectClass = "YIELD";
                 ProjectName = struct.name;
                 contractAddress = struct.address;
@@ -104,26 +113,33 @@ async function GetPreData() {
             } catch (error) {
                 console.log(struct.name);
                 console.log(error);
+                i = i + 1;
             }
         };
 
-    } catch {
+    } catch (error) {
         console.log(error);
+        i = i + 1;
     }
 }
 
-GetPreData()
+// GetPreData()
+// let ProjectClass = process.argv[2];  // 第一个参数
+// let ProjectName = process.argv[3];
+// let contractAddress = process.argv[4];
 
-async function main(ProjectClass, ProjectName, contractAddress, parseTransactions) {
+// main(ProjectClass, ProjectName, contractAddress)
+
+async function main(ProjectClass, ProjectName, contractAddress) {
 
     try {
         if (contractAddress.length == 42) {
-            // const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
-            // console.log(contractTransaction)
-            // const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
-            // console.log(Transactions)
-            // const parseTransactions = JSON.parse(Transactions);
-            // console.log(parseTransactions)
+            const contractTransaction = await fetchContractTransactions(ProjectClass, ProjectName, contractAddress);
+            console.log(contractTransaction)
+            const Transactions = await fs.promises.readFile(contractTransaction, 'utf-8');
+            console.log(Transactions)
+            const parseTransactions = JSON.parse(Transactions);
+            console.log(parseTransactions)
 
             let optracerPath = '';
             let calltracerPath = '';
